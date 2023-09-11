@@ -1,0 +1,119 @@
+---
+title: "Two columns layout Quarto"
+format: 
+  html:
+    code-fold: true
+engine: knitr
+---
+
+
+```{=html}
+<style>
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 767px) {
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-item {
+  background: lightgray;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.blog-post-square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-post-image {
+  height: 200px;
+  width: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.blog-post-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.blog-post-text {
+  font-size: 14px;
+  text-align: center;
+}
+</style>
+```
+
+::: {.grid-3-columns}
+
+::: {.grid-item .blog-post-square}
+
+![Blog Post 1 Image](lmao.png){.blog-post-image}
+
+#### {.blog-post-title} Blog Post 1
+
+Some description text here for blog post 1.{.blog-post-text}
+:::
+
+::: {.grid-item .blog-post-square}
+
+![Blog Post 2 Image](lmao.png){.blog-post-image}
+
+#### {.blog-post-title} Blog Post 2
+
+Some description text here for blog post 2.{.blog-post-text}
+
+:::
+
+::: {.grid-item .blog-post-square}
+
+![Blog Post 3 Image](lmao.png){.blog-post-image}
+
+#### {.blog-post-title} Blog Post 3
+
+Some description text here for blog post 3.{.blog-post-text}
+
+:::
+
+::: {.grid-item .blog-post-square}
+
+![Blog Post 4 Image](lmao.png){.blog-post-image}
+
+#### {.blog-post-title} Blog Post 4
+
+Some description text here for blog post 4.{.blog-post-text}
+
+:::
+
+
+::: {.grid-item .blog-post-square}
+
+![Blog Post 5 Image](image-url-5.jpg){.blog-post-image}
+
+#### {.blog-post-title} Blog Post 5
+
+Some description text here for blog post 5.{.blog-post-text}
+
+:::
+
+::: {.grid-item .blog-post-square}
+
+
+![Blog Post 6 Image](image-url-6.jpg){.blog-post-image}
+
+#### {.blog-post-title} Blog Post 6
+
+Some description text here for blog post 6.{.blog-post-text}
+
+:::
+
+:::
